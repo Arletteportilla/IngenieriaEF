@@ -1,3 +1,4 @@
+# vista/vista_paciente.py
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 
@@ -62,7 +63,7 @@ class VistaPaciente(tk.Tk):
             messagebox.showinfo("Resultado", resultado)
 
     def listar_pacientes(self):
-        pacientes = self.controlador.listar_pacientes()
+        pacientes = self.controlador.obtener_todos_los_pacientes()
         lista_pacientes = "\n".join(f"{p.id} - {p.nombre}" for p in pacientes)
         messagebox.showinfo("Lista de Pacientes", lista_pacientes)
 
